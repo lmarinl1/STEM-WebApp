@@ -1,0 +1,47 @@
+<%= form_with(model: manager, local: true) do |form| %>
+  <% if manager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(manager.errors.count, "error") %> prohibited this manager from being saved:</h2>
+
+      <ul>
+      <% manager.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Code %>
+    <%= form.text_field :Code, id: :manager_Code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name, id: :manager_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :manager_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :City %>
+    <%= form.text_field :City, id: :manager_City %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cellphone %>
+    <%= form.text_field :Cellphone, id: :manager_Cellphone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Address %>
+    <%= form.text_field :Address, id: :manager_Address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
