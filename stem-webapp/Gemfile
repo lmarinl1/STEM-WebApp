@@ -54,4 +54,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+# Devise provides authentication: lets users sign up and sign in, so that you know who they are.
 gem 'devise'
+# rolify helps you assign roles to users and check which roles they have.
+gem 'authority'
+# Authority helps you use those roles, or any other logic you like (user points, info from a single sign on app, etc) to control who can do what.
+gem 'rolify'
